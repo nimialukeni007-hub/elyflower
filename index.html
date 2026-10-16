@@ -29,13 +29,8 @@ button,input,select,textarea{font:inherit;color:inherit}
 .script{font-family:'Great Vibes',cursive;color:var(--gold2)}
 /* background */
 .bg{position:fixed;inset:0;z-index:-2;background:radial-gradient(800px 600px at 80% 0%,rgba(122,31,43,.55),transparent 60%),radial-gradient(700px 600px at 0% 55%,rgba(216,179,106,.16),transparent 60%),radial-gradient(700px 700px at 100% 100%,rgba(232,163,173,.16),transparent 60%),var(--bg)}
-.blob{position:fixed;z-index:-1;border-radius:50%;filter:blur(60px);opacity:.5;pointer-events:none;transition:transform 1.2s cubic-bezier(.2,.7,.2,1)}
-.b1{width:320px;height:320px;background:var(--wine);right:-90px;top:10vh}
-.b2{width:260px;height:260px;background:#b88a3e;left:-100px;top:60vh;opacity:.28}
-.petal{position:fixed;top:-30px;z-index:-1;width:14px;height:18px;border-radius:70% 0 70% 0;background:linear-gradient(135deg,var(--rose),#a3434f);opacity:.55;pointer-events:none;animation:fall linear infinite}
-@keyframes fall{0%{transform:translate3d(0,-5vh,0) rotate(0)}100%{transform:translate3d(var(--dx),108vh,0) rotate(540deg)}}
 /* glass */
-.glass{position:relative;overflow:hidden;border-radius:30px;background:linear-gradient(135deg,rgba(255,255,255,.14),rgba(255,255,255,.04) 55%,rgba(255,255,255,.09));border:1.5px solid rgba(255,255,255,.22);-webkit-backdrop-filter:blur(22px);backdrop-filter:blur(22px);box-shadow:inset 0 2px 0 rgba(255,255,255,.35),0 24px 50px rgba(0,0,0,.45)}
+.glass{position:relative;overflow:hidden;border-radius:30px;background:linear-gradient(135deg,rgba(255,255,255,.17),rgba(255,255,255,.05) 55%,rgba(255,255,255,.1)),rgba(30,14,17,.84);border:1.5px solid rgba(255,255,255,.24);box-shadow:inset 0 2px 0 rgba(255,255,255,.38),0 14px 30px rgba(0,0,0,.4)}
 .glass:after{content:"";position:absolute;inset:0;pointer-events:none;opacity:0;transition:opacity .3s;background:radial-gradient(260px circle at var(--mx,50%) var(--my,0%),rgba(240,215,154,.22),transparent 60%)}
 .glass.touch:after{opacity:1}
 .tilt{transition:transform .25s ease}
@@ -55,7 +50,7 @@ button,input,select,textarea{font:inherit;color:inherit}
 .pre-bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--gold),var(--gold2));box-shadow:0 0 12px var(--gold);transition:width .4s ease}
 @keyframes up{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
 /* nav */
-nav{position:fixed;top:12px;left:50%;transform:translateX(-50%);z-index:50;width:calc(100% - 24px);max-width:760px;display:flex;align-items:center;justify-content:space-between;gap:8px;padding:8px 10px 8px 10px;border-radius:999px;background:rgba(24,12,14,.6);border:1.5px solid rgba(255,255,255,.2);-webkit-backdrop-filter:blur(22px);backdrop-filter:blur(22px);box-shadow:inset 0 1px 0 rgba(255,255,255,.3),0 10px 30px rgba(0,0,0,.45)}
+nav{position:fixed;top:12px;left:50%;transform:translateX(-50%);z-index:50;width:calc(100% - 24px);max-width:760px;display:flex;align-items:center;justify-content:space-between;gap:8px;padding:8px 10px 8px 10px;border-radius:999px;background:rgba(24,12,14,.94);border:1.5px solid rgba(255,255,255,.22);box-shadow:inset 0 1px 0 rgba(255,255,255,.3),0 8px 20px rgba(0,0,0,.4)}
 .brand{display:flex;align-items:center;gap:8px;font-family:'Cormorant Garamond',serif;font-weight:700;letter-spacing:.14em;font-size:17px;color:var(--gold2)}
 .brand svg{width:30px;height:24px}
 .brand svg path{fill:none;stroke:var(--gold);stroke-width:2;stroke-linecap:round}
@@ -81,7 +76,7 @@ h1 em{color:var(--rose);font-weight:500}
 .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
 .hero-img{position:relative;overflow:visible;padding:12px;border-radius:200px 200px 34px 34px}
 .hero-img img{border-radius:190px 190px 24px 24px;width:100%;aspect-ratio:4/5;object-fit:cover}
-.chip{position:absolute;padding:9px 16px;border-radius:999px;font-size:12px;font-weight:500;background:rgba(20,10,12,.6);border:1.5px solid rgba(255,255,255,.28);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);animation:float 6s ease-in-out infinite;color:var(--gold2)}
+.chip{position:absolute;padding:9px 16px;border-radius:999px;font-size:12px;font-weight:500;background:rgba(20,10,12,.85);border:1.5px solid rgba(255,255,255,.28);animation:float 6s ease-in-out infinite;color:var(--gold2)}
 .c1{left:-6px;bottom:90px}.c2{right:-4px;top:80px;animation-delay:-3s}
 @keyframes float{50%{transform:translateY(-12px)}}
 .mq{overflow:hidden;white-space:nowrap;padding:16px 0;border-block:1px solid rgba(255,255,255,.1);margin:26px 0 0;color:var(--gold);font-family:'Cormorant Garamond',serif;font-size:20px;font-style:italic}
@@ -100,11 +95,37 @@ h2{font-family:'Cormorant Garamond',serif;font-size:clamp(32px,6.5vw,54px);font-
 .card .ph{position:relative;border-radius:22px;overflow:hidden;aspect-ratio:4/5;background:linear-gradient(135deg,#3a161c,#150a0c)}
 .card .ph img{width:100%;height:100%;object-fit:cover;transition:transform .8s}
 .card:hover .ph img{transform:scale(1.07)}
-.pp{position:absolute;left:10px;bottom:10px;padding:7px 14px;border-radius:999px;font-weight:500;font-size:13px;background:rgba(14,7,8,.62);border:1px solid rgba(255,255,255,.28);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);color:var(--gold2)}
+.pp{position:absolute;left:10px;bottom:10px;padding:7px 14px;border-radius:999px;font-weight:500;font-size:13px;background:rgba(14,7,8,.8);border:1px solid rgba(255,255,255,.28);color:var(--gold2)}
 .fg{position:absolute;right:10px;top:10px;padding:5px 11px;border-radius:999px;font-size:11px;background:var(--gold);color:#2a1a07;font-weight:600}
 .card h3{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:600;margin:14px 6px 2px;line-height:1.15}
 .card p{font-size:13px;color:var(--mut);margin:0 6px 14px;flex:1}
 .card .btn{margin:0 6px 6px}
+/* galeria baralho */
+.deck{overflow:hidden;text-align:center;padding-bottom:40px}
+.stk{position:relative;width:min(74vw,330px);aspect-ratio:4/5;margin:46px auto 0;perspective:1100px;touch-action:pan-y;user-select:none;-webkit-user-select:none}
+.sk{position:absolute;inset:0;border-radius:28px;padding:8px;background:linear-gradient(135deg,rgba(255,255,255,.34),rgba(255,255,255,.06)),#2a1317;border:1.5px solid rgba(255,255,255,.34);box-shadow:inset 0 1.5px 0 rgba(255,255,255,.5),0 16px 30px rgba(0,0,0,.5);transition:transform .6s cubic-bezier(.2,.8,.2,1),opacity .5s;will-change:transform;cursor:grab}
+.sk.nt{transition:none}
+.sk img{width:100%;height:100%;object-fit:cover;border-radius:21px;pointer-events:none;background:#1a0d10}
+.sk b{position:absolute;left:18px;bottom:18px;padding:7px 14px;border-radius:999px;font-weight:500;font-size:12.5px;background:rgba(14,7,8,.82);border:1px solid rgba(255,255,255,.3);color:var(--gold2)}
+.dcap{margin-top:26px;min-height:96px}
+.dcap h3{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:600;line-height:1.1}
+.dcap p{color:var(--gold2);font-size:14px;margin:4px 0 14px}
+.dnav{display:flex;align-items:center;justify-content:center;gap:16px}
+.ar{width:48px;height:48px;border-radius:50%;border:1.5px solid rgba(255,255,255,.3);cursor:pointer;font-size:20px;color:var(--gold2);background:linear-gradient(135deg,rgba(255,255,255,.2),rgba(255,255,255,.04)),rgba(30,14,17,.9);box-shadow:inset 0 1.5px 0 rgba(255,255,255,.4)}
+.ar:active{transform:scale(.92)}
+.dcnt{font-family:'Cormorant Garamond',serif;font-size:20px;color:var(--mut);min-width:70px}
+/* corporativo */
+.tiers{display:grid;gap:14px;margin-top:26px}
+@media(min-width:800px){.tiers{grid-template-columns:repeat(3,1fr)}}
+.tier{padding:26px 24px}
+.tier small{display:block;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+.tier b{display:block;font-family:'Cormorant Garamond',serif;font-size:40px;color:var(--gold2);font-weight:600;line-height:1.1;margin:8px 0 2px}
+.tier span{font-size:13.5px;color:var(--mut)}
+.calc{margin-top:18px;padding:26px;display:grid;gap:14px}
+@media(min-width:800px){.calc{grid-template-columns:1fr 1fr 1fr;align-items:end}}
+.calc .out{font-family:'Cormorant Garamond',serif;font-size:30px;color:var(--gold2);font-weight:600;line-height:1.1}
+.calc .out small{display:block;font-family:'Montserrat',sans-serif;font-weight:300;font-size:12.5px;color:var(--mut)}
+input[type=number]{width:100%;padding:13px 16px;border-radius:16px;background:rgba(255,255,255,.07);border:1.5px solid rgba(255,255,255,.2);outline:0;font-size:14px}
 /* configurator */
 .cfg{display:grid;gap:18px}
 @media(min-width:940px){.cfg{grid-template-columns:1.4fr .8fr;align-items:start}.sum{position:sticky;top:84px}}
@@ -124,7 +145,7 @@ h2{font-family:'Cormorant Garamond',serif;font-size:clamp(32px,6.5vw,54px);font-
 .opt input:checked+span{background:linear-gradient(135deg,var(--gold2),var(--gold));color:#2a1a07;border-color:transparent;font-weight:500;transform:scale(1.03)}
 .opt input:focus-visible+span{outline:2px solid var(--gold2);outline-offset:2px}
 .opt input:disabled+span{opacity:.3;text-decoration:line-through;cursor:not-allowed}
-.plist{display:grid;gap:10px}
+.plist{display:grid;gap:10px;max-height:420px;overflow-y:auto;padding-right:4px;-webkit-overflow-scrolling:touch}
 .pitem{display:flex;gap:12px;align-items:center;padding:8px;border-radius:20px;cursor:pointer;background:rgba(255,255,255,.05);border:1.5px solid rgba(255,255,255,.14);transition:.2s}
 .pitem.on{border-color:var(--gold);background:rgba(216,179,106,.12);box-shadow:0 0 0 3px rgba(216,179,106,.12)}
 .pitem img{width:56px;height:56px;border-radius:14px;object-fit:cover}
@@ -180,14 +201,13 @@ input[type=date]{color-scheme:dark}
 .ct a.row:active{transform:scale(.97)}
 footer{padding:36px 0 110px;text-align:center;font-size:12px;color:#8d7d80;letter-spacing:.06em}
 footer b{color:var(--gold);font-weight:400}
-.fab{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom));z-index:60;display:flex;align-items:center;gap:8px;padding:14px 20px;border-radius:999px;font-weight:500;font-size:13px;background:linear-gradient(135deg,var(--gold2),var(--gold));color:#2a1a07;box-shadow:0 12px 34px rgba(0,0,0,.5);animation:pulse 2.6s infinite;transition:transform .15s}
+.fab{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom));z-index:60;display:flex;align-items:center;gap:8px;padding:14px 20px;border-radius:999px;font-weight:500;font-size:13px;background:linear-gradient(135deg,var(--gold2),var(--gold));color:#2a1a07;box-shadow:0 12px 30px rgba(0,0,0,.5);transition:transform .15s}
 .fab:active{transform:scale(.94)}
-@keyframes pulse{70%{box-shadow:0 12px 34px rgba(0,0,0,.5),0 0 0 18px rgba(216,179,106,0)}100%{box-shadow:0 12px 34px rgba(0,0,0,.5),0 0 0 0 rgba(216,179,106,0)}}
 .rv{opacity:0;transform:translateY(34px) scale(.97);transition:opacity .9s cubic-bezier(.2,.8,.2,1),transform .9s cubic-bezier(.2,.8,.2,1)}
 .rv.in{opacity:1;transform:none}
 .d1{transition-delay:.12s}.d2{transition-delay:.24s}
 .bar{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--gold),var(--gold2));z-index:100;box-shadow:0 0 10px var(--gold)}
-@media(prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.rv{opacity:1;transform:none}.petal{display:none}}
+@media(prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.rv{opacity:1;transform:none}}
 </style>
 <noscript><style>#pre{display:none}.rv{opacity:1;transform:none}</style></noscript>
 </head>
@@ -209,14 +229,14 @@ footer b{color:var(--gold);font-weight:400}
   </div>
 </div>
 
-<div class="bg"></div><div class="blob b1" data-s="26"></div><div class="blob b2" data-s="-20"></div>
+<div class="bg"></div>
 <div class="bar" id="bar"></div>
 
 <nav>
   <a href="#topo" class="brand" aria-label="Elyflower">
     <svg viewBox="0 0 120 90"><path d="M60 8C48 30 48 52 60 70C72 52 72 30 60 8Z"/><path d="M60 70C40 64 24 48 22 26C40 30 54 44 60 70Z"/><path d="M60 70C80 64 96 48 98 26C80 30 66 44 60 70Z"/></svg><span>ELYFLOWER</span>
   </a>
-  <ul><li><a href="#catalogo">Catálogo</a></li><li><a href="#encomendar">Encomendar</a></li><li><a href="#workshop">Workshop</a></li><li><a href="#contacto">Contacto</a></li></ul>
+  <ul><li><a href="#catalogo">Catálogo</a></li><li><a href="#galeria">Galeria</a></li><li><a href="#encomendar">Encomendar</a></li><li><a href="#contacto">Contacto</a></li></ul>
   <a class="btn sm" href="#encomendar">Encomendar</a>
 </nav>
 
@@ -225,26 +245,53 @@ footer b{color:var(--gold);font-weight:400}
   <div>
     <div class="script rv">Flores que falam por ti</div>
     <h1 class="rv d1">Mais que flores,<br><em>sentimentos</em> que marcam.</h1>
-    <p class="lead rv d2">Bouquets, boxes de presente e orquídeas com entrega em Luanda. Personalize a sua encomenda e envie directamente pelo WhatsApp.</p>
+    <p class="lead rv d2">Bouquets, boxes de presente, orquídeas, cestos e pacotes corporativos com entrega em Luanda. Personalize a sua encomenda e envie directamente pelo WhatsApp.</p>
     <div class="cta rv d2"><a class="btn" href="#encomendar">Personalizar encomenda</a><a class="btn ghost" href="#catalogo">Ver catálogo</a></div>
   </div>
   <div class="glass hero-img rv d1 tilt">
-    <img id="heroImg" alt="Bouquet de 50 rosas vermelhas Elyflower">
-    <span class="chip c1">Entrega grátis · 50 rosas</span>
-    <span class="chip c2">Aberto todos os dias</span>
+    <img id="heroImg" alt="Bouquet Premium de rosas vermelhas Elyflower" fetchpriority="high">
+    <span class="chip c1">Bouquets desde 33.000 Kz</span>
+    <span class="chip c2">Entrega grátis · 50 rosas</span>
   </div>
 </div>
-<div class="mq" aria-hidden="true"><div>Rosas frescas ✦ Entrega em Luanda ✦ Feito para emocionar ✦ Detalhes que encantam ✦ Atendimento todos os dias ✦ Rosas frescas ✦ Entrega em Luanda ✦ Feito para emocionar ✦ Detalhes que encantam ✦ Atendimento todos os dias ✦ </div></div>
+<div class="mq" aria-hidden="true"><div>Rosas frescas ✦ Entrega em Luanda ✦ Feito para emocionar ✦ Cestos e pequenos-almoços ✦ Pacotes corporativos ✦ Atendimento todos os dias ✦ Rosas frescas ✦ Entrega em Luanda ✦ Feito para emocionar ✦ Cestos e pequenos-almoços ✦ Pacotes corporativos ✦ Atendimento todos os dias ✦ </div></div>
 </header>
+
+<section id="galeria" class="deck"><div class="wrap">
+  <span class="tag rv">Galeria</span>
+  <h2 class="rv">O nosso <em style="color:var(--rose);font-weight:500">baralho</em> de presentes.</h2>
+  <p class="sec-lead rv" style="margin-inline:auto">Deslize a foto para o lado para ver a seguinte. Toque em "Personalizar" quando gostar de uma.</p>
+  <div class="stk" id="stk" aria-roledescription="carrossel de fotos"></div>
+  <div class="dcap"><h3 id="dn"></h3><p id="dp"></p>
+    <div class="dnav"><button class="ar" id="dprev" type="button" aria-label="Foto anterior">&#8592;</button><span class="dcnt" id="dc"></span><button class="ar" id="dnext" type="button" aria-label="Foto seguinte">&#8594;</button></div>
+    <div style="margin-top:16px"><button class="btn" id="dpick" type="button">Personalizar este</button></div></div>
+</div></section>
 
 <section id="catalogo"><div class="wrap">
   <span class="tag rv">Catálogo</span>
   <h2 class="rv">Escolha o presente perfeito.</h2>
   <p class="sec-lead rv">Toque em "Personalizar" para escolher cores, extras e data de entrega.</p>
   <div class="chips rv" id="filters">
-    <button class="fchip on" data-f="all">Todos</button><button class="fchip" data-f="bouquets">Bouquets</button><button class="fchip" data-f="boxes">Boxes</button><button class="fchip" data-f="orquideas">Orquídeas</button>
+    <button class="fchip on" data-f="all">Todos</button><button class="fchip" data-f="bouquets">Bouquets</button><button class="fchip" data-f="boxes">Boxes</button><button class="fchip" data-f="orquideas">Orquídeas</button><button class="fchip" data-f="cestos">Cestos</button><button class="fchip" data-f="corp">Corporativo</button>
   </div>
   <div class="grid" id="grid"></div>
+</div></section>
+
+<section id="corporativo"><div class="wrap">
+  <span class="tag rv">Pacotes corporativos · Outubro Rosa</span>
+  <h2 class="rv">Mais que flores, uma mensagem de cuidado.</h2>
+  <p class="sec-lead rv">Uma rosa embrulhada em papel kraft, com cartão, para equipas, empresas e eventos. Quanto maior o pacote, melhor o preço.</p>
+  <div class="tiers">
+    <div class="glass tier tilt rv"><small>10 a 29 unidades</small><b>4.500 Kz</b><span>por unidade</span></div>
+    <div class="glass tier tilt rv d1"><small>30 a 59 unidades</small><b>4.000 Kz</b><span>por unidade · entrega grátis</span></div>
+    <div class="glass tier tilt rv d2"><small>Acima de 60 unidades</small><b>3.500 Kz</b><span>por unidade · entrega grátis em Luanda</span></div>
+  </div>
+  <div class="glass calc rv">
+    <div><span class="lbl" style="margin-top:0">Quantas unidades?</span><input type="number" id="cq" min="10" max="2000" value="30" inputmode="numeric"></div>
+    <div class="out" id="co">—</div>
+    <button class="btn" type="button" id="cgo">Encomendar pacote</button>
+  </div>
+  <p class="sec-lead" style="margin-top:14px;font-size:13px">Para encomendas individuais ou fora do pacote corporativo, veja a Solitária Clássica a partir de 3.500 Kz.</p>
 </div></section>
 
 <section id="encomendar"><div class="wrap">
@@ -259,6 +306,7 @@ footer b{color:var(--gold);font-weight:400}
         <h3>1. Escolha o produto</h3><p class="hint">Toque para escolher.</p>
         <div class="plist" id="plist"></div>
         <div id="sizeBox" style="display:none"><span class="lbl">Tamanho</span><div class="opts" id="sizes"></div></div>
+        <div id="qtyBox" style="display:none"><span class="lbl">Quantidade (mínimo 10)</span><input type="number" id="qty" min="10" max="2000" value="30" inputmode="numeric"></div>
         <div class="note" id="pnote" style="display:none"></div>
         <div class="msg" id="m1"></div>
         <div class="nav2"><span></span><button class="btn" type="button" data-next>Continuar</button></div>
@@ -365,7 +413,7 @@ footer b{color:var(--gold);font-weight:400}
 
 <script>
 (function(){
-var IMG={rosas50:'fotos-rosas50.jpg',rosas150:'fotos-rosas150.jpg',desculpas:'fotos-desculpas.jpg',bouquet33:'fotos-bouquet33.jpg',ferrero:'fotos-ferrero.jpg',boxprestigio:'fotos-box-prestigio.jpg',executiva:'fotos-executiva.jpg',orquidea:'fotos-orquidea.jpg'};
+var IMG={premium:'ef-premium.jpg',ouro:'ef-ouro-preto.jpg',gipso:'ef-rosas-gipsofila.jpg',misto:'ef-misto-rosas.jpg',r15:'ef-15-rosas.jpg',r50:'ef-50-rosas.jpg',r100:'ef-100-rosas.jpg',boxferrero:'ef-box-rosas-ferrero.jpg',exec:'ef-box-executiva.jpg',baileys:'ef-box-baileys.jpg',redonda:'ef-box-redonda.jpg',orqbalao:'ef-orquidea-balao.jpg',orqvinho:'ef-orquidea-vinho.jpg',orqchamp:'ef-orquidea-champagne.jpg',cestopa:'ef-cesto-pequeno-almoco.jpg',boxpa:'ef-box-pequeno-almoco.jpg',cestofesta:'ef-cesto-festa.jpg',corp:'ef-corporativo.jpg',bouquet33:'fotos-bouquet33.jpg',desculpas:'fotos-desculpas.jpg',rosas150:'fotos-rosas150.jpg',ferrero:'fotos-ferrero.jpg',prestigio:'fotos-box-prestigio.jpg',orquidea:'fotos-orquidea.jpg'};
 /* ===== CONFIGURAÇÃO (a Elyflower pode editar aqui) ===== */
 var WA='244932528510';
 var DELIVERY={from:11,to:17};          // entregas 11:00–17:00
@@ -375,17 +423,34 @@ var RIBS=['Branca','Rosa','Vermelha','Dourada','Verde'];
 var FLCOL=['Vermelho','Rosa','Branco','Amarelo','Laranja','Misto'];
 var EXTRAS=['Balão','Urso de peluche','Caixa de chocolates'];
 var P=[
- {id:'bouquet33',cat:'bouquets',name:'Bouquet Elyflower',price:33000,img:IMG.bouquet33,desc:'Flores variadas e coloridas, produzido conforme o stock do dia.',wrap:1,fl:1,rib:1,adv:3,note:'Os bouquets são produzidos de acordo com o stock existente no dia.'},
- {id:'desculpas',cat:'bouquets',name:'Bouquet de Rosas Vermelhas',price:69000,img:IMG.desculpas,desc:'Perfeito para pedir desculpa ou celebrar um regresso. Embrulho branco com laço.',sizes:[['Médio',69000],['Maior',118000]],wrap:1,rib:1,adv:3},
- {id:'rosas50',cat:'bouquets',name:'Bouquet 50 Rosas',price:140000,img:IMG.rosas50,desc:'O amor em sua melhor forma. Rosas frescas selecionadas.',free:1,wrap:1,rib:1,adv:12,note:'Entrega grátis neste bouquet. Pedido com pelo menos 12 horas de antecedência.'},
+ {id:'premium',cat:'bouquets',gal:1,name:'Bouquet Premium',price:180000,sizes:[['Pétit',180000],['Médio',350000],['Maior',660000]],img:IMG.premium,desc:'Rosas vermelhas em abundância, embrulho preto e laço. O gesto máximo.',wrap:1,rib:1,adv:24,note:'Peça de grande dimensão: encomende com pelo menos 24 horas de antecedência.'},
+ {id:'ouro',cat:'bouquets',gal:1,name:'Bouquet Ouro & Preto',price:150000,sizes:[['Médio',150000],['Maior',300000]],img:IMG.ouro,desc:'Rosas vermelhas e gipsófila em papel preto com borda dourada.',wrap:1,rib:1,adv:24},
+ {id:'gipso',cat:'bouquets',gal:1,name:'Bouquet Rosas & Gipsófila',price:33000,sizes:[['Médio',33000],['Grande',66000]],img:IMG.gipso,desc:'Rosas vermelhas com gipsófila em embrulho preto. Clássico e elegante.',wrap:1,rib:1,adv:3},
+ {id:'misto',cat:'bouquets',gal:1,name:'Bouquet Misto de Rosas',price:55000,sizes:[['Médio',55000],['Maior',110000]],img:IMG.misto,desc:'Rosas em tons de vermelho, rosa e pêssego, com gipsófila.',wrap:1,rib:1,adv:6,note:'As cores seguem o stock do dia e podem variar ligeiramente.'},
+ {id:'r15',cat:'bouquets',gal:1,name:'Bouquet 15 Rosas Vermelhas',price:79000,img:IMG.r15,desc:'Quinze rosas vermelhas em embrulho vermelho e branco com detalhes dourados.',wrap:1,rib:1,adv:6},
+ {id:'r50',cat:'bouquets',gal:1,name:'Bouquet 50 Rosas',price:140000,img:IMG.r50,desc:'O amor em sua melhor forma. Cinquenta rosas com gipsófila.',free:1,wrap:1,rib:1,adv:12,note:'Entrega grátis neste bouquet. Pedido com pelo menos 12 horas de antecedência.'},
+ {id:'r100',cat:'bouquets',gal:1,name:'Bouquet 100 Rosas',price:null,img:IMG.r100,desc:'Cem rosas vermelhas num embrulho bordô. Peça exclusiva, sob encomenda.',wrap:1,rib:1,adv:24,note:'Valor sob consulta. Confirmamos no WhatsApp.'},
  {id:'rosas150',cat:'bouquets',name:'Bouquet 150 Rosas',price:373000,img:IMG.rosas150,desc:'O gesto mais inesquecível. Peça exclusiva, produzida sob encomenda.',wrap:1,rib:1,adv:24,note:'Peça exclusiva: encomende com pelo menos 24 horas de antecedência.'},
+ {id:'desculpas',cat:'bouquets',name:'Bouquet de Rosas Vermelhas',price:69000,sizes:[['Médio',69000],['Maior',118000]],img:IMG.desculpas,desc:'Perfeito para pedir desculpa ou celebrar um regresso. Embrulho branco com laço.',wrap:1,rib:1,adv:3},
+ {id:'bouquet33',cat:'bouquets',name:'Bouquet de Flores Variadas',price:33000,img:IMG.bouquet33,desc:'Flores variadas e coloridas, produzido conforme o stock do dia.',wrap:1,fl:1,rib:1,adv:3,note:'Os bouquets são produzidos de acordo com o stock existente no dia.'},
+ {id:'solitaria',cat:'bouquets',name:'Solitária Clássica',price:3500,from:1,img:IMG.corp,desc:'Uma rosa com gipsófila, embrulhada com laço. Para encomendas individuais.',wrap:1,rib:1,adv:3},
+ {id:'boxferrero',cat:'boxes',gal:1,name:'Box Rosas & Ferrero',price:null,img:IMG.boxferrero,desc:'Caixa comprida com rosas vermelhas e Ferrero Rocher, tampa com o nosso nome.',rib:0,adv:12,note:'Valor sob consulta. Confirmamos no WhatsApp.'},
+ {id:'exec',cat:'boxes',gal:1,name:'Box Executiva',price:null,img:IMG.exec,desc:'Rosas, Ferrero e um perfume numa caixa preta com laço vermelho. Montada ao seu critério.',adv:24,note:'Valor sob consulta. Diga-nos o que quer incluir nas observações.'},
+ {id:'baileys',cat:'boxes',gal:1,name:'Box Baileys & Rosas',price:null,img:IMG.baileys,desc:'Rosas vermelhas, Ferrero Rocher, Baileys e uma taça "With Love".',adv:12,note:'Valor sob consulta. Confirmamos no WhatsApp.'},
+ {id:'redonda',cat:'boxes',gal:1,name:'Box Redonda de Rosas',price:null,img:IMG.redonda,desc:'Caixa redonda preta cheia de rosas vermelhas, com laço de cetim.',rib:1,adv:12,note:'Valor sob consulta. Confirmamos no WhatsApp.'},
  {id:'ferrero',cat:'boxes',name:'Box Ferrero Rocher',price:75000,img:IMG.ferrero,desc:'Rosas e Ferrero Rocher numa mala rosa. Ideal para aniversários.',rib:1,adv:6},
- {id:'prestigio',cat:'boxes',name:'Box Prestígio',price:null,img:IMG.boxprestigio,desc:'Mais que flores, uma emoção em forma de presente.',fl:1,rib:1,adv:6,note:'Valor sob consulta. Confirmamos no WhatsApp.'},
- {id:'executiva',cat:'boxes',name:'Box Executiva',price:null,img:IMG.executiva,desc:'Presenteie com classe. Também montada ao critério do cliente.',rib:1,adv:24,note:'Valor sob consulta. Box montada ao seu critério: diga-nos o que quer incluir nas observações.'},
- {id:'orquidea',cat:'orquideas',name:'Orquídea 2 Astes',price:60000,img:IMG.orquidea,desc:'Delicadeza que transforma ambientes. Flor natural premium.',wrap:1,rib:1,adv:6}
+ {id:'prestigio',cat:'boxes',name:'Box Prestígio',price:null,img:IMG.prestigio,desc:'Mais que flores, uma emoção em forma de presente.',fl:1,rib:1,adv:6,note:'Valor sob consulta. Confirmamos no WhatsApp.'},
+ {id:'orqbalao',cat:'orquideas',gal:1,name:'Orquídea, Ferrero & Balão',price:null,img:IMG.orqbalao,desc:'Orquídea num cesto com Ferrero Rocher e balão "Feliz Aniversário".',rib:1,adv:6,note:'Valor sob consulta. Confirmamos no WhatsApp.'},
+ {id:'orqvinho',cat:'orquideas',gal:1,name:'Orquídea & Vinho',price:null,img:IMG.orqvinho,desc:'Orquídea, flores, vinho, queijo e Ferrero numa caixa de madeira.',adv:12,note:'Valor sob consulta. Confirmamos no WhatsApp.'},
+ {id:'orqchamp',cat:'orquideas',gal:1,name:'Orquídea & Champanhe',price:null,img:IMG.orqchamp,desc:'Orquídea branca, champanhe e duas taças numa caixa branca com laço dourado.',adv:12,note:'Valor sob consulta. Confirmamos no WhatsApp.'},
+ {id:'orquidea',cat:'orquideas',name:'Orquídea 2 Astes',price:60000,img:IMG.orquidea,desc:'Delicadeza que transforma ambientes. Flor natural premium.',wrap:1,rib:1,adv:6},
+ {id:'cestopa',cat:'cestos',gal:1,name:'Cesto de Pequeno-almoço',price:null,img:IMG.cestopa,desc:'Cesto com sumo, fruta, iogurte, pão, bolachas, frios e uma caneca.',adv:12,note:'Valor sob consulta. Confirmamos no WhatsApp.'},
+ {id:'boxpa',cat:'cestos',gal:1,name:'Box de Pequeno-almoço',price:null,img:IMG.boxpa,desc:'Croissant, iogurte com granola, fruta, sumo, pastel de nata e muito mais.',adv:12,note:'Valor sob consulta. Confirmamos no WhatsApp.'},
+ {id:'cestofesta',cat:'cestos',gal:1,name:'Cesto de Festa',price:null,img:IMG.cestofesta,desc:'Espumante, Ferrero, bombons, bolo e flores secas num cesto com laço.',adv:12,note:'Valor sob consulta. Confirmamos no WhatsApp.'},
+ {id:'corp',cat:'corp',name:'Pacote Corporativo',price:3500,from:1,tiers:[[10,29,4500],[30,59,4000],[60,100000,3500]],min:10,img:IMG.corp,desc:'Uma rosa em papel kraft com cartão, para equipas e eventos. Outubro Rosa.',adv:48,note:'A partir de 30 unidades a entrega é grátis (em Luanda a partir de 60). Antecedência mínima: 48 horas.'}
 ];
 /* ======================================================= */
-if(IMG.rosas50){document.getElementById('heroImg').src=IMG.rosas50;document.getElementById('sImg').src=IMG.rosas50;}
+document.getElementById('heroImg').src=IMG.premium;document.getElementById('sImg').src=IMG.premium;
 var $=function(s,r){return (r||document).querySelector(s)},$$=function(s,r){return [].slice.call((r||document).querySelectorAll(s))};
 var rm=matchMedia('(prefers-reduced-motion:reduce)').matches;
 function kz(n){return String(n).replace(/\B(?=(\d{3})+(?!\d))/g,'.')+' Kz'}
@@ -405,15 +470,9 @@ setTimeout(open,5500); // segurança
 var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
 function reveal(){$$('.rv').forEach(function(el){io.observe(el)})}
 
-/* ===== petals ===== */
-if(!rm){for(var i=0;i<12;i++){var p=document.createElement('i');p.className='petal';p.style.left=(Math.random()*100)+'vw';p.style.setProperty('--dx',(Math.random()*160-80)+'px');p.style.animationDuration=(14+Math.random()*14)+'s';p.style.animationDelay=(-Math.random()*20)+'s';p.style.transform='scale('+(.6+Math.random()*.9)+')';document.body.appendChild(p)}}
-
-/* ===== scroll bar + blobs ===== */
-var bar=$('#bar'),blobs=$$('.blob'),px=0,py=0;
-function bl(){if(rm)return;blobs.forEach(function(b){var s=+b.dataset.s;b.style.transform='translate('+(px*s*3)+'px,'+(py*s*3-scrollY*.06*(s>0?1:-.6))+'px)'})}
-addEventListener('scroll',function(){var h=document.documentElement;bar.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%';bl()},{passive:true});
-addEventListener('pointermove',function(e){px=e.clientX/innerWidth-.5;py=e.clientY/innerHeight-.5;bl()},{passive:true});
-addEventListener('touchmove',function(e){var t=e.touches[0];px=t.clientX/innerWidth-.5;py=t.clientY/innerHeight-.5;bl()},{passive:true});
+/* ===== scroll bar ===== */
+var bar=$('#bar');
+addEventListener('scroll',function(){var h=document.documentElement;bar.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%'},{passive:true});
 
 /* ===== glass interactions ===== */
 function fx(root){$$('.glass',root).forEach(function(c){if(c._fx)return;c._fx=1;
@@ -425,7 +484,7 @@ function fx(root){$$('.glass',root).forEach(function(c){if(c._fx)return;c._fx=1;
 document.addEventListener('pointerdown',function(e){var b=e.target.closest&&e.target.closest('.btn,.fab,.row');if(!b||rm)return;var r=b.getBoundingClientRect(),s=Math.max(r.width,r.height),d=document.createElement('span');d.className='ripple';d.style.cssText='width:'+s+'px;height:'+s+'px;left:'+(e.clientX-r.left-s/2)+'px;top:'+(e.clientY-r.top-s/2)+'px';if(getComputedStyle(b).position==='static')b.style.position='relative';b.style.overflow='hidden';b.appendChild(d);setTimeout(function(){d.remove()},650)});
 
 /* ===== catálogo ===== */
-function priceTxt(p){return p.price==null?'Sob consulta':(p.sizes?'desde ':'')+kz(p.price)}
+function priceTxt(p){return p.price==null?'Sob consulta':((p.sizes||p.from)?'desde ':'')+kz(p.price)+(p.tiers?'/un.':'')}
 var grid=$('#grid');
 function drawGrid(f){grid.innerHTML=P.filter(function(p){return f==='all'||p.cat===f}).map(function(p){
  return '<article class="glass card tilt"><div class="ph"><img loading="lazy" src="'+(p.img||'')+'" alt="'+esc(p.name)+'"><span class="pp">'+priceTxt(p)+'</span>'+(p.free?'<span class="fg">Entrega grátis</span>':'')+'</div><h3>'+esc(p.name)+'</h3><p>'+esc(p.desc)+'</p><button class="btn ghost" type="button" data-pick="'+p.id+'">Personalizar</button></article>'}).join('');fx(grid)}
@@ -434,7 +493,8 @@ $('#filters').addEventListener('click',function(e){var b=e.target.closest('.fchi
 grid.addEventListener('click',function(e){var b=e.target.closest('[data-pick]');if(!b)return;pick(b.dataset.pick);goStep(1);$('#encomendar').scrollIntoView({behavior:'smooth'})});
 
 /* ===== configurador ===== */
-var S={p:null,size:0,wrap:'',rib:'',fl:[],extras:[],mode:'Entrega',slot:''};
+var S={p:null,size:0,wrap:'',rib:'',fl:[],extras:[],mode:'Entrega',slot:'',q:0};
+function unit(p,q){if(!p.tiers||q<p.min)return null;for(var i=0;i<p.tiers.length;i++)if(q>=p.tiers[i][0]&&q<=p.tiers[i][1])return p.tiers[i][2];return p.tiers[p.tiers.length-1][2]}
 var plist=$('#plist');
 plist.innerHTML=P.map(function(p){return '<div class="pitem" data-id="'+p.id+'" tabindex="0" role="button"><img src="'+(p.img||'')+'" alt=""><div><b>'+esc(p.name)+'</b><small>'+priceTxt(p)+'</small></div></div>'}).join('');
 function optHtml(name,list,type){return list.map(function(v,i){return '<label class="opt"><input type="'+type+'" name="'+name+'" value="'+esc(v)+'"><span>'+esc(v)+'</span></label>'}).join('')}
@@ -445,14 +505,16 @@ function pick(id){S.p=P.filter(function(x){return x.id===id})[0];S.size=0;S.wrap
  var p=S.p,sb=$('#sizeBox');
  if(p.sizes){sb.style.display='block';$('#sizes').innerHTML=p.sizes.map(function(s,i){return '<label class="opt"><input type="radio" name="size" value="'+i+'"'+(i===0?' checked':'')+'><span>'+s[0]+' · '+kz(s[1])+'</span></label>'}).join('')}else sb.style.display='none';
  var n=$('#pnote');if(p.note){n.style.display='block';n.textContent=p.note}else n.style.display='none';
+ $('#qtyBox').style.display=p.tiers?'block':'none';
  $('#wrapBox').style.display=p.wrap?'block':'none';$('#flBox').style.display=p.fl?'block':'none';$('#ribBox').style.display=p.rib?'block':'none';
  $('#m1').textContent='';refreshSlots();upd()}
 plist.addEventListener('click',function(e){var it=e.target.closest('.pitem');if(it)pick(it.dataset.id)});
 plist.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){var it=e.target.closest('.pitem');if(it){e.preventDefault();pick(it.dataset.id)}}});
 
-function base(){var p=S.p;if(!p)return null;if(p.sizes)return p.sizes[S.size][1];return p.price}
+function base(){var p=S.p;if(!p)return null;if(p.tiers){var u=unit(p,S.q);return u==null?null:u*S.q}if(p.sizes)return p.sizes[S.size][1];return p.price}
+function isFree(){var p=S.p;return !!(p&&(p.free||(p.tiers&&S.q>=30)))}
 function upd(){var f=$('#form'),p=S.p;
- S.size=+(($('input[name=size]:checked',f)||{}).value||0);
+ S.size=+(($('input[name=size]:checked',f)||{}).value||0);S.q=+($('#qty').value||0);
  S.wrap=(($('input[name=wrap]:checked',f)||{}).value||'');S.rib=(($('input[name=rib]:checked',f)||{}).value||'');
  S.fl=$$('input[name=fl]:checked',f).map(function(i){return i.value});S.extras=$$('input[name=ex]:checked',f).map(function(i){return i.value});
  S.mode=$('input[name=mode]:checked',f).value;
@@ -460,11 +522,11 @@ function upd(){var f=$('#form'),p=S.p;
  var dl=[];function r(k,v){if(v)dl.push('<dt>'+k+'</dt><dd>'+esc(v)+'</dd>')}
  if(!p){$('#sDl').innerHTML='<dt>Produto</dt><dd>Escolha um produto</dd>';$('#sTot').textContent='—';return}
  if(p.img)$('#sImg').src=p.img;$('#sImg').alt=p.name;
- r('Produto',p.name+(p.sizes?' ('+p.sizes[S.size][0]+')':''));r('Embrulho',S.wrap);r('Flores',S.fl.join(', '));r('Fita',S.rib);r('Extras',S.extras.join(', '));
+ r('Produto',p.name+(p.sizes?' ('+p.sizes[S.size][0]+')':''));if(p.tiers)r('Quantidade',S.q+' un. × '+(unit(p,S.q)?kz(unit(p,S.q)):'—'));r('Embrulho',S.wrap);r('Flores',S.fl.join(', '));r('Fita',S.rib);r('Extras',S.extras.join(', '));
  r('Tipo',S.mode);var d=$('#date').value;if(d)r('Data',d.split('-').reverse().join('/')+(S.slot?' · '+S.slot:''));
  $('#sDl').innerHTML=dl.join('');
- var b=base();$('#sTot').textContent=b==null?'Sob consulta':kz(b);
- var nt=[];if(S.mode==='Entrega'&&!p.free)nt.push('taxa de entrega');if(S.extras.length)nt.push('extras');if(b==null)nt.push('valor do produto');
+ var b=base();$('#sTot').textContent=b==null?(p.tiers?'Mín. '+p.min+' un.':'Sob consulta'):kz(b);
+ var nt=[];if(S.mode==='Entrega'&&!isFree())nt.push('taxa de entrega');if(S.extras.length)nt.push('extras');if(b==null&&!p.tiers)nt.push('valor do produto');
  $('#sNote').textContent=nt.length?'A confirmar no WhatsApp: '+nt.join(', ')+'.':'Entrega grátis incluída. Confirmamos tudo no WhatsApp.';
 }
 $('#form').addEventListener('input',function(e){if(e.target.id==='card')$('#cc').textContent=e.target.value.length;if(e.target.name==='mode'||e.target.id==='date')refreshSlots();upd()});
@@ -487,7 +549,7 @@ var cur=1;
 function goStep(n){cur=n;$$('.step').forEach(function(s){s.classList.toggle('on',+s.dataset.step===n)});$$('.steps i').forEach(function(i,k){i.classList.toggle('on',k<n)});$('#ok').style.display='none'}
 function flag(el,bad){el.classList.toggle('err',!!bad);return !bad}
 function valid(n){
- if(n===1){if(!S.p){$('#m1').textContent='Escolha um produto para continuar.';return false}$('#m1').textContent='';return true}
+ if(n===1){if(!S.p){$('#m1').textContent='Escolha um produto para continuar.';return false}if(S.p.tiers&&S.q<S.p.min){$('#m1').textContent='O pacote corporativo começa nas '+S.p.min+' unidades.';return false}$('#m1').textContent='';return true}
  if(n===2){var p=S.p,m='';if(p.wrap&&!S.wrap)m='Escolha a cor do embrulho.';else if(p.fl&&!S.fl.length)m='Escolha pelo menos uma cor de flores.';else if(p.rib&&!S.rib)m='Escolha a cor da fita.';$('#m2').textContent=m;return !m}
  return true}
 $$('[data-next]').forEach(function(b){b.addEventListener('click',function(){if(valid(cur)){goStep(cur+1);$('#encomendar').scrollIntoView({behavior:'smooth'})}})});
@@ -505,7 +567,7 @@ $('#send').addEventListener('click',function(){
  $('#m3').textContent=msg;if(msg)return;
  var p=S.p,b=base(),L=[];
  L.push('🌹 *Nova encomenda · Elyflower*','');
- L.push('*Produto:* '+p.name+(p.sizes?' ('+p.sizes[S.size][0]+')':''));
+ L.push('*Produto:* '+p.name+(p.sizes?' ('+p.sizes[S.size][0]+')':''));if(p.tiers)L.push('*Quantidade:* '+S.q+' un. × '+kz(unit(p,S.q)));
  if(S.wrap)L.push('*Embrulho:* '+S.wrap);if(S.fl.length)L.push('*Flores:* '+S.fl.join(', '));if(S.rib)L.push('*Fita:* '+S.rib);
  if(S.extras.length)L.push('*Extras:* '+S.extras.join(', '));
  var c=$('#card').value.trim();if(c)L.push('*Cartão:* "'+c+'"');
@@ -515,8 +577,8 @@ $('#send').addEventListener('click',function(){
  L.push('*Enviado por:* '+sn.value.trim()+($('#stel').value.trim()?' · '+$('#stel').value.trim():'')+($('#surp').checked?' (entrega surpresa: não revelar)':''));
  L.push('*Pagamento:* '+$('input[name=pay]:checked').value);
  var o=$('#obs').value.trim();if(o)L.push('*Obs.:* '+o);
- L.push('','*Total estimado:* '+(b==null?'sob consulta':kz(b)));
- L.push('_Entrega/extras a confirmar_');
+ L.push('','*Total estimado:* '+(b==null?'sob consulta':kz(b)));if(isFree())L.push('_Entrega grátis incluída no pacote_');
+ if(!isFree())L.push('_Entrega/extras a confirmar_');
  var url='https://wa.me/'+WA+'?text='+encodeURIComponent(L.join('\n'));
  $('#ok').style.display='block';
  var w=window.open(url,'_blank');if(!w)location.href=url});
@@ -527,6 +589,37 @@ function tick(){var d=target-Date.now();if(d<=0){$('#cd').innerHTML='<div style=
  $('#cdD').textContent=Math.floor(d/864e5);$('#cdH').textContent=Math.floor(d%864e5/36e5);$('#cdM').textContent=Math.floor(d%36e5/6e4)}
 tick();setInterval(tick,30000);
 $('#wsBtn').href='https://wa.me/'+WA+'?text='+encodeURIComponent('Olá! Quero fazer o registo no Workshop de Arte Floral (31 de Outubro, 10:00–13:00).');
+
+
+/* ===== galeria baralho 3D ===== */
+var G=P.filter(function(p){return p.gal}),N=G.length,cur=0,busy=false,stk=$('#stk'),cards=[];
+G.forEach(function(p,i){var d=document.createElement('div');d.className='sk';d.innerHTML='<img alt="'+esc(p.name)+'" draggable="false"><b>'+esc(priceTxt(p))+'</b>';d.firstChild.dataset.s=p.img;stk.appendChild(d);cards.push(d)});
+function pose(d){var sg=d%2?1:-1;return d>=4?'translate3d(0,-44px,-220px) rotate(0deg)':'translate3d('+(sg*d*15)+'px,'+(-d*12)+'px,'+(-d*55)+'px) rotate('+(sg*d*2.6)+'deg)'}
+function render(){cards.forEach(function(c,i){var d=(i-cur+N)%N;c.style.transform=pose(d);c.style.opacity=d>=4?0:(d===3?.55:1);c.style.zIndex=N-d;c.style.pointerEvents=d===0?'auto':'none';var im=c.firstChild;if(d<6&&!im.src)im.src=im.dataset.s});
+ var p=G[cur];$('#dn').textContent=p.name;$('#dp').textContent=priceTxt(p);$('#dc').textContent=(cur+1)+' / '+N}
+function go(dir){if(busy||N<2)return;busy=true;
+ if(dir>0){var t=cards[cur];t.style.transform='translate3d('+(130)+'%,-20px,0) rotate(24deg)';t.style.opacity=0;
+  setTimeout(function(){cur=(cur+1)%N;t.classList.add('nt');render();void t.offsetWidth;t.classList.remove('nt');busy=false},480)}
+ else{var b=cards[(cur-1+N)%N];b.classList.add('nt');b.style.transform='translate3d(-130%,-20px,0) rotate(-24deg)';b.style.opacity=0;b.firstChild.src||(b.firstChild.src=b.firstChild.dataset.s);void b.offsetWidth;b.classList.remove('nt');cur=(cur-1+N)%N;render();setTimeout(function(){busy=false},500)}}
+$('#dnext').addEventListener('click',function(){go(1);idle()});$('#dprev').addEventListener('click',function(){go(-1);idle()});
+var dx=0,dy=0,sx=0,sy=0,dr=false,t0d=0;
+stk.addEventListener('pointerdown',function(e){if(busy)return;dr=true;dx=dy=0;sx=e.clientX;sy=e.clientY;t0d=Date.now();cards[cur].classList.add('nt');try{stk.setPointerCapture(e.pointerId)}catch(_){}});
+stk.addEventListener('pointermove',function(e){if(!dr)return;dx=e.clientX-sx;dy=e.clientY-sy;cards[cur].style.transform='translate3d('+dx+'px,'+(dy*.25)+'px,0) rotate('+(dx/16)+'deg)'});
+function dend(){if(!dr)return;dr=false;var c=cards[cur];c.classList.remove('nt');var v=Math.abs(dx)/Math.max(1,Date.now()-t0d);
+ if(Math.abs(dx)>70||v>.6){if(dx<0){c.style.transform='translate3d(-130%,-20px,0) rotate(-24deg)';c.style.opacity=0;if(!busy){busy=true;setTimeout(function(){cur=(cur+1)%N;c.classList.add('nt');render();void c.offsetWidth;c.classList.remove('nt');busy=false},480)}}else{go(1)}}
+ else if(Math.abs(dx)<6&&Math.abs(dy)<6){go(1)}else{c.style.transform=pose(0)}idle()}
+stk.addEventListener('pointerup',dend);stk.addEventListener('pointercancel',dend);
+$('#dpick').addEventListener('click',function(){pick(G[cur].id);goStep(1);$('#encomendar').scrollIntoView({behavior:'smooth'})});
+render();
+var dvis=false,dpause=0;new IntersectionObserver(function(e){dvis=e[0].isIntersecting}).observe(stk);
+function idle(){dpause=Date.now()+9000}
+if(!rm)setInterval(function(){if(dvis&&!dr&&!busy&&Date.now()>dpause&&!document.hidden)go(1)},4200);
+
+/* ===== calculadora corporativa ===== */
+var cq=$('#cq'),corp=P.filter(function(p){return p.id==='corp'})[0];
+function cu(){var q=+cq.value||0,u=unit(corp,q);$('#co').innerHTML=u?kz(u*q)+'<small>'+q+' un. × '+kz(u)+(q>=30?' · entrega grátis':'')+'</small>':'Mínimo '+corp.min+' unidades<small>Escolha 10 ou mais</small>'}
+cq.addEventListener('input',cu);cu();
+$('#cgo').addEventListener('click',function(){var q=+cq.value||0;if(q<corp.min){cu();return}pick('corp');$('#qty').value=q;upd();goStep(1);$('#encomendar').scrollIntoView({behavior:'smooth'})});
 
 fx(document);upd();
 })();
